@@ -11,7 +11,12 @@ import SignIn from './components/Auth/SignIn.jsx';
 import Content from './components/Map/Content.jsx';
 import getLocations from './components/helpers/getLocations.js';
 import Rellax from 'rellax';
-import $ from 'jquery';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,6 +29,7 @@ class App extends React.Component {
         lng: -81.3792
       }
     }
+    this.feeds = ['Map', 'Events', 'Users', 'Profile']
     this.changeFeed = this.changeFeed.bind(this);
   }
 
@@ -48,8 +54,45 @@ class App extends React.Component {
   render () {
     return (
       <div id='pkworld'>
-        <Navigation changeFeed={this.changeFeed}/>
-        <div id="feed">
+        <Router>
+          <div id="navigation">
+            <h1 onClick={() => {this.props.changeFeed('Home')}}>PK World</h1>
+            <nav>
+              <ul className="buttons">
+                {this.feeds.map((feed, index) => <li key={feed} value={feed}><Link to={feed === 'Home' ? '/' : `/${feed}`}>{feed}</Link></li>)}
+              </ul>
+            </nav>
+          </div>
+          <div id="feed">
+            <Switch>
+              <Route path={"/Home"}>
+                <Home changeFeed={this.changeFeed}/>
+              </Route>
+              <Route path="/Map">
+                <PKMap
+                  location={this.state.location}
+                  changeFeed={this.changeFeed}/>
+              </Route>
+              <Route path="/Users">
+                <Users
+                  location={this.state.location}
+                  changeFeed={this.changeFeed}
+                  />
+              </Route>
+              <Route path="/Events">
+                <Events
+                  location={this.state.location}
+                  changeFeed={this.changeFeed}/>
+              </Route>
+              <Route path="/Profile">
+                <SignIn
+                  />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+        {/* <Navigation changeFeed={this.changeFeed}/> */}
+        {/* <div id="feed">
           {this.state.feed === 'Home'
               ? <Home changeFeed={this.changeFeed}/>
               : null}
@@ -83,7 +126,7 @@ class App extends React.Component {
               style={{color: 'white'}}
               href="mailto:calebiuliano@gmail.com">Developed by Caleb Iuliano</a>
             </footer>
-          : null}
+          : null} */}
       </div>
     )
   }

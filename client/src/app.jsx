@@ -29,7 +29,7 @@ class App extends React.Component {
         lng: -81.3792
       }
     }
-    this.feeds = ['Map', 'Events', 'Users', 'Profile']
+    this.feeds = ['Home','Map', 'Events', 'Users', 'Profile']
     this.changeFeed = this.changeFeed.bind(this);
   }
 
@@ -65,7 +65,7 @@ class App extends React.Component {
           </div>
           <div id="feed">
             <Switch>
-              <Route path={"/Home"}>
+              <Route exact path={"/"}>
                 <Home changeFeed={this.changeFeed}/>
               </Route>
               <Route path="/Map">

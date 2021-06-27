@@ -27,17 +27,17 @@ class Event extends React.Component {
         <li className="dataLists">
           {/* {this.state.more ? */}
             <div>
-              <h3>{this.props.event.name}</h3>
+              <h2>{this.props.event.name}</h2>
               <div className="contentContainer">
                 <div className="contents">
                   <div className="description">
-                      <h3 className="underline bold">Date:</h3> {moment(this.props.event.date[0]).format("MMM Do YY")} - {moment(this.props.event.date[1]).format("MMM Do YY")}<br/>
                       <h3 className="underline bold">Description:</h3> {this.props.event.description}<br/>
                       <h3 className="underline bold">Website:</h3> {this.props.event.website? <a href={this.props.event.website}>{this.props.event.website}</a> : null}<br/>
                       <h3 className="underline bold">Is this a jam?:</h3> {this.props.event.jam ? 'Yes' : 'No'}<br/>
                       <h3 className="underline bold">Is this at a gym?:</h3> {this.props.event.gym ? 'Yes' : 'No'}<br/>
                   </div>
                   <div className="address">
+                     <h3 className="underline bold">Date:</h3> {moment(this.props.event.date[0]).format("MMM Do YY")} - {moment(this.props.event.date[1]).format("MMM Do YY")}<br/>
                     <h3 className="underline bold">Address:</h3> {this.props.event.address}<br/>
                     <h3 className="underline bold">City:</h3> {this.props.event.city}<br/>
                     <h3 className="underline bold">State:</h3> {this.props.event.state}<br/>

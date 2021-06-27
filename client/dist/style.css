@@ -1044,6 +1044,7 @@ img.rellax.half {
 
 h1.athletes {
   font-size: 4.5vw;
+  text-shadow: 0 0 25px black;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -1052,55 +1053,61 @@ h1.athletes {
   right: 0;
   z-index: 2;
 }
+h1.spots {
+  font-size: 4.5vw;
+  text-shadow: 0 0 25px black;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50vh;
+  left: 35vw;
+  right: 0;
+  z-index: 2;
+}
+h1.events {
+  font-size: 4.5vw;
+  text-shadow: 0 0 25px black;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 80vh;
+  left: 12vw;
+  right: 0;
+  z-index: 2;
+}
 @media screen and (max-width:540px) {
   h1.spots {
-    font-size: 4.5vw;
-    margin: 0;
-    padding: 0;
     position: absolute;
     top: 50vh;
     left: 35vw;
     right: 0;
-    z-index: 2;
   }
 }
 
 @media screen and (min-width: 540px) {
   h1.spots {
-    font-size: 4.5vw;
-    margin: 0;
-    padding: 0;
     position: absolute;
     top: 60vh;
     left: 35vw;
     right: 0;
-    z-index: 2;
   }
 }
 
 @media screen and (max-width:540px) {
   h1.events {
-    font-size: 4.5vw;
-    margin: 0;
-    padding: 0;
     position: absolute;
     top: 80vh;
     left: 12vw;
     right: 0;
-    z-index: 2;
   }
 }
 
 @media screen and (min-width: 540px) {
   h1.events {
-    font-size: 4.5vw;
-    margin: 0;
-    padding: 0;
     position: absolute;
     top: 90vh;
     left: 12vw;
     right: 0;
-    z-index: 2;
   }
 }
 

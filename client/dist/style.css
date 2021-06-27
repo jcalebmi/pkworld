@@ -233,10 +233,17 @@ button.location
 img {
   width: 5vw;
 }
-.popOver {
-  /* margin: 0 auto; */
+#map
+div.popup {
+  position:absolute;
+  z-index: 4;
+  left:35%
+}
+ul.popOver {
+  margin: 0 auto;
+  padding: 0;
+  width: 29.5vw;
   color:black;
-  z-index:4;
   background-color: white;
   border: solid black;
 }

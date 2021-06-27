@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import { Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption } from '@reach/combobox';
-// import '@reach/combobox/styles.css';
 
 const SearchSpots = (props) => {
   //returns suggested locations with data and functions to use
@@ -8,23 +6,26 @@ const SearchSpots = (props) => {
   const [marker, setMarker] = useState(null)
   const [location, setLocation] = useState(null);
 
+  const handleClick = (marker) => {
+    props.panTo({lat: marker.lat, lng: marker.lng})
+    setValue('')
+  }
+
   return (
     <div className="search">
-      <Combobox
-        onSelect={() => setValue('')}>
-          {/* Creates  Input Field */}
-          <ComboboxInput
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="Search Spots"
-          />
-          {/* Creates Popup Box with Data */}
-          <ComboboxPopover className="popOver">
-            <ComboboxList>
-            {props.markers.filter(marker => marker.name.toLowerCase().includes(value.toLowerCase())).map((marker, index) => <ComboboxOption key={index} value={`${marker.name} \n ${marker.address}`} onClick={() => props.panTo({lat: marker.lat, lng: marker.lng})}/>)}
-            </ComboboxList>
-          </ComboboxPopover>
-      </Combobox>
+      <input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Search Spots">
+      </input>
+      {value.length > 0
+      ? <div className="popup">
+        <ul className=
+        "popOver">
+            {props.markers.filter(marker => marker.name.toLowerCase().includes(value.toLowerCase())).map((marker, index) => <li key={index} onClick={() => handleClick(marker)}>{`${marker.name} \n ${marker.address}`}</li>)}
+          </ul>
+        </div>
+      : null}
     </div>
   )
 }

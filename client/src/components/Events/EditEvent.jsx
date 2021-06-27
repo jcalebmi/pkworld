@@ -193,10 +193,11 @@ class EditEvent extends React.Component {
                   <input
                     type="submit"
                     value="Delete"></input>
-                </form>}
-            <div
-              className="closeModal"
-              onClick={this.props.closeModal}>+</div>
+                </form>}<br/>
+                <div
+                  className="closeModal"
+                  ><span onClick={this.props.closeModal}>+</span>
+                </div>
         </div>
       </div>
     )

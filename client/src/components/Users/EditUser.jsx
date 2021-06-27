@@ -168,7 +168,8 @@ class EditUser extends React.Component {
           <br/>
           <div
             className="closeModal"
-            onClick={this.props.closeModal}>+</div>
+            ><span onClick={this.props.closeModal}>+</span>
+          </div>
         </div>
       </div>
     )

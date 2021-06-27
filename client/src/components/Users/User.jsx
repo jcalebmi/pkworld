@@ -22,18 +22,18 @@ class User extends React.Component {
       <li className="user dataLists">
           <div>
             <div className="userInfo">
-              <div>
+              <div className="profilePic">
                 <h3>{this.props.user.displayName}</h3>
                 <img className="profilePic" src={this.props.user.pic}></img>
               </div>
               <div className="contentContainer">
                 <div className="contents">
-                  <span>City: {this.props.user.city}</span><br></br>
-                  <span>State: {this.props.user.state}</span><br></br>
-                  <span>Country: {this.props.user.country}</span><br/>
-                  <span>Email: {this.props.user.email}</span><br></br>
-                  <span>Phone: {this.props.user.phone}</span><br/>
-                  <span>Hosts Athletes: <br/>{this.props.user.host
+                  <span><h3 className="underline bold">City:</h3> {this.props.user.city}</span><br></br>
+                  <span><h3 className="underline bold">State:</h3> {this.props.user.state}</span><br></br>
+                  <span><h3 className="underline bold">Country:</h3> {this.props.user.country}</span><br/>
+                  <span><h3 className="underline bold">Email:</h3> {this.props.user.email}</span><br></br>
+                  <span><h3 className="underline bold">Phone:</h3> {this.props.user.phone}</span><br/>
+                  <span><h3 className="underline bold">Hosts Athletes:</h3> <br/>{this.props.user.host
                     ? <img src={yes} style={{width: '5vw', height:'auto'}}/>
                     : <img src={no} style={{width: '5vw', height:'auto'}}/>}</span>
                 </div>

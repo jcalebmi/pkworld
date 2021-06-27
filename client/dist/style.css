@@ -397,12 +397,29 @@ h3 {
 #events
 li
 .contentContainer {
-  text-align:center
+  text-align: center;
 }
 #events
 li
 .contents {
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+#events
+li
+h3 {
+  display: inline;
+}
+#events
+div.description {
+  margin: 0 auto;
+  text-align: left;
+}
+#events
+div.address {
+  margin: 0 auto;
   text-align: left;
 }
 
@@ -481,7 +498,10 @@ li
   display: grid;
   grid-template-columns: 50% 50%;
 }
-
+#users
+div.profilePic {
+  margin-top: 1em;
+}
 img.profilePic {
   border-radius: 50%;
   box-shadow: 0 0 10px 3px grey;
@@ -491,6 +511,12 @@ li
 .contents {
   display: inline-block;
   text-align: left;
+}
+#users
+li
+.contents
+h3 {
+  display: inline;
 }
 #users
 button {

@@ -25,25 +25,27 @@ class Event extends React.Component {
     return (
       <div>
         <li className="dataLists">
-          {this.state.more ?
+          {/* {this.state.more ? */}
             <div>
               <h3>{this.props.event.name}</h3>
               <div className="contentContainer">
                 <div className="contents">
-                  <p>
-                    Date: {moment(this.props.event.date[0]).format("MMM Do YY")} - {moment(this.props.event.date[1]).format("MMM Do YY")}<br/>
-                    Description: {this.props.event.description}<br/>
-                    Website: {this.props.event.website? <a href={this.props.event.website}>{this.props.event.website}</a> : null}<br/>
-                    Address: {this.props.event.address}<br/>
-                    City: {this.props.event.city}<br/>
-                    State: {this.props.event.state}<br/>
-                    Country: {this.props.event.country}<br/>
-                    Is this a jam?: {this.props.event.jam ? 'Yes' : 'No'}<br/>
-                    Is this at a gym: {this.props.event.gym ? 'Yes' : 'No'}
-                  </p>
+                  <div className="description">
+                      <h3 className="underline bold">Date:</h3> {moment(this.props.event.date[0]).format("MMM Do YY")} - {moment(this.props.event.date[1]).format("MMM Do YY")}<br/>
+                      <h3 className="underline bold">Description:</h3> {this.props.event.description}<br/>
+                      <h3 className="underline bold">Website:</h3> {this.props.event.website? <a href={this.props.event.website}>{this.props.event.website}</a> : null}<br/>
+                      <h3 className="underline bold">Is this a jam?:</h3> {this.props.event.jam ? 'Yes' : 'No'}<br/>
+                      <h3 className="underline bold">Is this at a gym?:</h3> {this.props.event.gym ? 'Yes' : 'No'}<br/>
+                  </div>
+                  <div className="address">
+                    <h3 className="underline bold">Address:</h3> {this.props.event.address}<br/>
+                    <h3 className="underline bold">City:</h3> {this.props.event.city}<br/>
+                    <h3 className="underline bold">State:</h3> {this.props.event.state}<br/>
+                    <h3 className="underline bold">Country:</h3> {this.props.event.country}<br/>
+                  </div>
                 </div>
                 <br/>
-                <span className="bold seeMore" onClick={this.showMore}>Close</span><br/>
+                {/* <span className="bold seeMore" onClick={this.showMore}>Close</span><br/> */}
                 {this.auth.currentUser && this.props.event.email === this.auth.currentUser.providerData[0].email
               ? <div id="deleteLi">
                   <div></div>
@@ -54,7 +56,8 @@ class Event extends React.Component {
                 </div>
                 : null}
               </div>
-            </div> :
+            </div>
+            {/* :
             <div>
               <h3>{this.props.event.name}</h3>
               <div className="contentContainer">
@@ -79,7 +82,7 @@ class Event extends React.Component {
                 </div>
                 : null}
               </div>
-            </div>}
+            </div>} */}
         </li>
       </div>
     )

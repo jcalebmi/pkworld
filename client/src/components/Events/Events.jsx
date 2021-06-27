@@ -163,7 +163,7 @@ class Events extends React.Component {
               event={this.state.event}
               handleEdit={this.handleEdit}/>
           : null}
-        <EventsInfo /><br/>
+        <EventsInfo />
         <ul className="dataLists">
           <div className="formsContainer">
               <SearchEvents

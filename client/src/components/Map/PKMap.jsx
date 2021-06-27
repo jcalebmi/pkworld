@@ -1,5 +1,5 @@
 
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {GoogleMap, useLoadScript, Marker, InfoWindow} from '@react-google-maps/api';
 import styles from './helpers/mapStyles.js';
 const moment = require('moment');

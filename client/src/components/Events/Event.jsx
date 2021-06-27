@@ -31,17 +31,17 @@ class Event extends React.Component {
               <div className="contentContainer">
                 <div className="contents">
                   <div className="description">
-                      <h3 className="underline bold">Description:</h3> {this.props.event.description}<br/>
-                      <h3 className="underline bold">Website:</h3> {this.props.event.website? <a href={this.props.event.website}>{this.props.event.website}</a> : null}<br/>
-                      <h3 className="underline bold">Is this a jam?:</h3> {this.props.event.jam ? 'Yes' : 'No'}<br/>
-                      <h3 className="underline bold">Is this at a gym?:</h3> {this.props.event.gym ? 'Yes' : 'No'}<br/>
+                      <h4 className="underline bold">Description:</h4> {this.props.event.description}<br/>
+                      <h4 className="underline bold">Website:</h4> {this.props.event.website? <a href={this.props.event.website}>{this.props.event.website}</a> : null}<br/>
+                      <h4 className="underline bold">Is this a jam?:</h4> {this.props.event.jam ? 'Yes' : 'No'}<br/>
+                      <h4 className="underline bold">Is this at a gym?:</h4> {this.props.event.gym ? 'Yes' : 'No'}<br/>
                   </div>
                   <div className="address">
-                     <h3 className="underline bold">Date:</h3> {moment(this.props.event.date[0]).format("MMM Do YY")} - {moment(this.props.event.date[1]).format("MMM Do YY")}<br/>
-                    <h3 className="underline bold">Address:</h3> {this.props.event.address}<br/>
-                    <h3 className="underline bold">City:</h3> {this.props.event.city}<br/>
-                    <h3 className="underline bold">State:</h3> {this.props.event.state}<br/>
-                    <h3 className="underline bold">Country:</h3> {this.props.event.country}<br/>
+                     <h4 className="underline bold">Date:</h4> {moment(this.props.event.date[0]).format("MMM Do YY")} - {moment(this.props.event.date[1]).format("MMM Do YY")}<br/>
+                    <h4 className="underline bold">Address:</h4> {this.props.event.address}<br/>
+                    <h4 className="underline bold">City:</h4> {this.props.event.city}<br/>
+                    <h4 className="underline bold">State:</h4> {this.props.event.state}<br/>
+                    <h4 className="underline bold">Country:</h4> {this.props.event.country}<br/>
                   </div>
                 </div>
                 <br/>
@@ -59,7 +59,7 @@ class Event extends React.Component {
             </div>
             {/* :
             <div>
-              <h3>{this.props.event.name}</h3>
+              <h4>{this.props.event.name}</h4>
               <div className="contentContainer">
                 <div className="contents">
                   <p>

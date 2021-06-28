@@ -25,6 +25,7 @@ const mapContainerStyle = {
   width: '100vw',
   height: '100vh',
   margin: '0 auto',
+  padding: 0
 }
 //map starting point
 const center = {
@@ -39,7 +40,7 @@ const options = {
   zoomControl: true,
   streetViewControl: true,
   rotateControl: true,
-  // fullscreenContro:true
+  // fullscreenControl:true
 }
 
 

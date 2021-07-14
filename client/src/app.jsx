@@ -16,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super (props);
     this.state = {
-      feed: 'Home',
+      feed: 'Map',
       spot: null,
       location: {
         lat: 28.5383,

@@ -93,6 +93,7 @@ const PKMap = (props) => {
   // handle loading of map
   if (loadError) return "error";
   if(!isLoaded) return "Loading";
+
   return (
     <div id="map">
       <MapInfo

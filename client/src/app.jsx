@@ -16,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super (props);
     this.state = {
-      feed: 'Map',
+      feed: 'Home',
       spot: null,
       location: {
         lat: 28.5383,
@@ -49,9 +49,9 @@ class App extends React.Component {
       <div id='pkworld'>
         <Navigation changeFeed={this.changeFeed}/>
         <div id="feed">
-          {/* {this.state.feed === 'Home'
+          {this.state.feed === 'Home'
               ? <Home changeFeed={this.changeFeed}/>
-              : null} */}
+              : null}
           {this.state.feed === 'Map'
             ? <PKMap
                 location={this.state.location}

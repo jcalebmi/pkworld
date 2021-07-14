@@ -49,9 +49,9 @@ class App extends React.Component {
       <div id='pkworld'>
         <Navigation changeFeed={this.changeFeed}/>
         <div id="feed">
-          {this.state.feed === 'Home'
+          {/* {this.state.feed === 'Home'
               ? <Home changeFeed={this.changeFeed}/>
-              : null}
+              : null} */}
           {this.state.feed === 'Map'
             ? <PKMap
                 location={this.state.location}

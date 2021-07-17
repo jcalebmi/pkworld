@@ -1,4 +1,4 @@
-const fastify = require('fastify')({ logger: true })
+const fastify = require('fastify')({ logger: false })
 const express = require('express');
 // const bodyParser = require('body-parser');
 const path = require('path');
@@ -90,7 +90,14 @@ fastify.post('/events', (req, res) => {
 });
 
 fastify.get('/events', (req, res) => {
-  Event.find().then(results => res.status(200).send(results));
+  Event.find().then(results => {
+    res.status(200).send(results);
+    results.forEach(result => {
+      if (result.date[1] < new Date()) {
+        Event.remove({_id: result._id}).then(item => console.log('Deleted Outdated Events'))
+      }
+    })
+  });
 })
 
 fastify.delete(`/events/:id`, (req, res) => {

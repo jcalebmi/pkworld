@@ -237,7 +237,7 @@ img {
 div.popup {
   position:absolute;
   z-index: 4;
-  left:37.5%;
+  left:35%;
 }
 ul.popOver {
   margin: 0 auto;

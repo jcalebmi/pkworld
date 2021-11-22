@@ -31,8 +31,6 @@ class User extends React.Component {
                   <span><h4 className="underline bold">City:</h4> {this.props.user.city}</span><br></br>
                   <span><h4 className="underline bold">State:</h4> {this.props.user.state}</span><br></br>
                   <span><h4 className="underline bold">Country:</h4> {this.props.user.country}</span><br/>
-                  <span><h4 className="underline bold">Email:</h4> {this.props.user.email}</span><br></br>
-                  <span><h4 className="underline bold">Phone:</h4> {this.props.user.phone}</span><br/>
                   <span><h4 className="underline bold">Hosts Athletes:</h4> <br/>{this.props.user.host
                     ? <img src={yes} style={{width: '5vw', height:'auto'}}/>
                     : <img src={no} style={{width: '5vw', height:'auto'}}/>}</span>

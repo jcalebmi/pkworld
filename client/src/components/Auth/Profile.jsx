@@ -99,8 +99,6 @@ class Profile extends React.Component {
                 <span><h3 className="underline bold">City:</h3> {this.state.user.city}</span><br></br>
                 <span><h3 className="underline bold">State:</h3> {this.state.user.state}</span><br></br>
                 <span><h3 className="underline bold">Country:</h3> {this.state.user.country}</span><br/>
-                <span><h3 className="underline bold">Email:</h3> {this.state.user.email}</span><br></br>
-                <span><h3 className="underline bold">Phone:</h3> {this.state.user.phone}</span><br/>
                 <span><h3 className="underline bold">Hosts Athletes:</h3> <br/>{this.state.user.host
                   ? <img src={yes} style={{width: '5vw', height:'auto'}}/>
                   : <img src={no} style={{width: '5vw', height:'auto'}}/>}</span>

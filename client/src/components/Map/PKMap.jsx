@@ -22,7 +22,7 @@ const auth = firebase.auth();
 const libraries = ["places", "geometry"];
 //Height and width necessary for map to work
 const mapContainerStyle = {
-  width: '100vw',
+  width: '100%',
   height: '100vh',
   margin: '0 auto',
   padding: 0

@@ -371,7 +371,7 @@ button {
 .forms
 div.add {
   text-align: center;
-  width: 33vw;
+  width: 33%;
   margin: 0 .2vw;
   padding: 0;
 }
@@ -386,14 +386,20 @@ span{
 #events
 .forms
 .search {
-  width: 33vw;
+  width: 33%;
   margin: 0;
+}
+#events
+.forms
+.search
+input {
+  width: 100%;
 }
 
 #events
 .forms
 select {
-  width: 33vw;
+  width: 33%;
 }
 
 #events
@@ -559,7 +565,7 @@ button {
 .forms
 div.add {
   text-align: center;
-  width: 50vw;
+  width: 50%;
   margin: 0 .2vw;
   padding: 0;
 }
@@ -574,8 +580,15 @@ span{
 #users
 .forms
 .search {
-  width: 50vw;
+  width: 50%;
   margin: 0;
+}
+
+#users
+.forms
+.search
+input {
+  width: 100%;
 }
 
 /* Add User */

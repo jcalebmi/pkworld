@@ -14,7 +14,7 @@ class Navigation extends React.Component {
   render () {
     return (
       <div id="navigation">
-        <h1 onClick={() => {this.props.changeFeed('Home')}}>PK World</h1>
+        <h1 onClick={() => {this.props.changeFeed('Map')}}>PK World</h1>
         <div className="buttons">
           {this.feeds.map((feed, index) => <button key={feed} onClick={this.handleClick} value={feed}>{feed}</button>)}
         </div>

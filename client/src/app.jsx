@@ -16,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super (props);
     this.state = {
-      feed: 'Home',
+      feed: 'Map',
       spot: null,
       location: {
         lat: 28.5383,
@@ -76,13 +76,6 @@ class App extends React.Component {
             ? <Content spot={this.state.spot}/>
             :null}
         </div>
-        {this.state.feed !== 'Home'
-          ? <footer>
-              <a
-              style={{color: 'white'}}
-              href="mailto:calebiuliano@gmail.com">Developed by Caleb Iuliano</a>
-            </footer>
-          : null}
       </div>
     )
   }
